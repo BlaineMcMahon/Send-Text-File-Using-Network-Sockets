@@ -1,0 +1,29 @@
+Author - Blaine McMahon
+Group Member #1 - Nick Yameen
+Group Memeber #2 - Jacob Sword
+
+
+*************************
+Files included:
+ 
+	Client - txt.py
+	Server - txt.py
+	yo.txt
+
+
+*************************
+
+Instructions to execute:
+
+	1. Download files and make sure all files are in same directory
+	2. Open 2 seperate CMD prompts
+	3. type command "C:\Users\Blaine\Documents\Network Design\Phase_1_1\Server - txt.py" in first CMD prompt
+	4. type command "C:\Users\Blaine\Documents\Network Design\Phase_1_1\Client - txt.py" in second CMD prompt
+	5. Look back in directory and the new file will be there
+
+
+refrences:
+	
+	1. https://stackoverflow.com/questions/9382045/send-a-file-through-sockets-in-python
+	2. https://stackoverflow.com/questions/51512621/python-3-sending-files-through-socket-client-server-program
+	3. Computer Networking - A Top Down Approach (John Kurose)

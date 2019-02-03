@@ -1,0 +1,59 @@
+Design Document 
+
+Libraries imported include: 
+	
+	-- socket
+	-- os
+	-- sys 
+	-- from socket import * 
+	-- os.path
+
+
+Server file 
+	
+	1. Ask for I/O
+		
+		- This will verify the user wants to accept a file from the network
+
+	2. Declare the port for which you will be transferring information and other protocols
+		
+		- Specify the type of socket you will be using
+		
+		- This case is AF_INET and SOCK_DGRAM
+			-- AF_INET = specifies the type of addresses that the socket can communicate with
+			-- SOCK_DGRAM = a datagram protcol, you send one datagram and then get one reply 
+
+		- sock.setsockopt
+			-- SOL is a socket layer 
+			-- SO_REUSEADDR allows for the same port to be used 
+
+		- sock.bind()
+			-- connects to the specified port 
+
+	3.  Next open a new file and append to it we then wait for the client to send messages
+
+		- Use a while loop to run indefinetly, this will verify that the server will always be looking for incoming messages 
+		- We then receive the information from the client and write it to the file 
+		- Note the bites are decoded using utf-8 this is because in order to send information it must be encoded, but then decoded to get the original contents
+
+
+	4.	We then close the socket 
+
+
+Client file 
+
+	1. We will verify the file we want to transfer is in the current directory, and then we will proceed.
+
+	2. Client socket will be constructed 
+
+		- The address will specified as 127.0.0.1 this is because we are just using the local machine 
+		- The port will be specified the same as the server 
+		- Just like the server the socket will be intiated and then the connect command will be used to connect the client to the server 
+
+	3. A loop is then used to open a file and read from it 
+
+		- The file will be opened in binary
+		- The contents will then be read from that file 
+		- The contents will then be sent to the server 
+
+	4. The socket will the close 
